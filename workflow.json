@@ -1,0 +1,229 @@
+[
+    {
+        "id": "c6df5854d71bdb41",
+        "type": "tab",
+        "label": "CC Project",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ddf9336c1a66fe42",
+        "type": "http in",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "url": "/regsiter",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 80,
+        "wires": [
+            [
+                "e6da62c8b0072889"
+            ]
+        ]
+    },
+    {
+        "id": "ac6f4bc95934253b",
+        "type": "http response",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "status": "regsiter-ok"
+        },
+        "x": 600,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e6da62c8b0072889",
+        "type": "http request",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.20.10.5:3001/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 80,
+        "wires": [
+            [
+                "ac6f4bc95934253b"
+            ]
+        ]
+    },
+    {
+        "id": "77181c21d6595eaf",
+        "type": "http in",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "url": "/track",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "e6ca3c682272cad3"
+            ]
+        ]
+    },
+    {
+        "id": "691d94b2cf242dbc",
+        "type": "http response",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "status": "track-ok"
+        },
+        "x": 600,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e6ca3c682272cad3",
+        "type": "http request",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.20.10.5:4001/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "691d94b2cf242dbc"
+            ]
+        ]
+    },
+    {
+        "id": "94e5c99653db50fb",
+        "type": "http in",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "url": "/notify",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "fad2517897ed1af6"
+            ]
+        ]
+    },
+    {
+        "id": "f0d32007b2a42a59",
+        "type": "http response",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "status": "track-ok"
+        },
+        "x": 600,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "fad2517897ed1af6",
+        "type": "http request",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.20.10.5:1884/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "f0d32007b2a42a59"
+            ]
+        ]
+    },
+    {
+        "id": "4cb86674a5d78bab",
+        "type": "http in",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "url": "/analytics",
+        "method": "get",
+        "upload": false,
+        "skipBodyParsing": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "44e65af54b4a246c"
+            ]
+        ]
+    },
+    {
+        "id": "b0e8db1c31c63b95",
+        "type": "http response",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "status": "analytics-ok"
+        },
+        "x": 600,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "44e65af54b4a246c",
+        "type": "http request",
+        "z": "c6df5854d71bdb41",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "http://172.20.10.5:5001/",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "b0e8db1c31c63b95"
+            ]
+        ]
+    }
+]
